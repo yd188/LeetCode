@@ -35,3 +35,10 @@ The customer with number '3' has two orders, which is greater than either custom
 So the result is customer_number '3'.
 Follow up: What if more than one customer have the largest number of orders, can you find all the customer_number in this case?
 */
+
+with temp as (
+select customer_number, dense_rank()over(order by counts desc)as rnk
+from (select customer_number, count(customer_number) as counts from orders group by 1))
+select temp.customer_number
+from temp
+where rnk=1
