@@ -43,13 +43,14 @@ On 2019-07-01, user 1 purchased using both desktop and mobile, user 2 purchased 
 On 2019-07-02, user 2 purchased using mobile only, user 3 purchased using desktop only and no one purchased using both platforms.
 */
 
+
 WITH get_date AS
 (SELECT DISTINCT spend_date 
-FROM shopping)
+FROM spendings)
 , get_both AS
 (SELECT  b.spend_date
 		,'both' AS platform
-		,SUM(NVL(a.sum_amount),0) AS total_amount
+		,SUM(NVL(a.sum_amount,0)) AS total_amount
 		,COUNT(a.user_id) AS total_users
 FROM(SELECT  spend_date
 			,user_id
@@ -63,7 +64,7 @@ GROUP BY 1, 2)
 , get_mobile AS
 (SELECT  d.spend_date
 		,'mobile' AS platform
-		,SUM(NVL(c.sum_amount),0) AS total_amount
+		,SUM(NVL(c.sum_amount,0)) AS total_amount
 		,COUNT(c.user_id) AS total_users
 FROM(SELECT  spend_date
 			,user_id
@@ -78,7 +79,7 @@ GROUP BY 1, 2)
 , get_desktop AS
 (SELECT  f.spend_date
 		,'mobile' AS platform
-		,SUM(NVL(e.sum_amount),0) AS total_amount
+		,SUM(NVL(e.sum_amount,0)) AS total_amount
 		,COUNT(e.user_id) AS total_users
 FROM(SELECT  spend_date
 			,user_id
