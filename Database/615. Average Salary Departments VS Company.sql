@@ -51,14 +51,26 @@ With he same formula for the average salary comparison in February, the result i
 Solution:
 */
 
-with temp as
-(select s.paydate, e.department_id, avg(s.amount) as average
-from salary as s
-inner join employee as e
-on s.employee_id = e.employee_id
-group by 1, 2)
-select trunc(temp.paydate) as pay_month, temp.department_id, 
-		case when max(temp.average) over (partition by temp.paydate) = min(temp.average) over (partition by temp.paydate) then 'Same'
-			when average > min(temp.average) over (partition by temp.paydate) and average = max(temp.average) over (partition by temp.paydate) then 'Higher'
-			when average = min(temp.average) over (partition by temp.paydate) and average < max(temp.average) over (partition by temp.paydate) then 'Lower' end as comparison
-from temp;
+WITH avg_month AS
+(SELECT pay_date
+		, AVG(amount) AS average
+FROM salary
+GROUP BY 1)
+, ind_avg AS
+(SELECT s.pay_date
+		, e.department_id
+		, AVG.amount) AS ind_avg
+FROM salary AS s
+INNER JOIN employee AS e 
+ON s.employee_id = e.employee_id
+GROUP BY 1, 2)
+SELECT to_char(avg_month.pay_date, 'YYYY-MM') AS pay_month
+		, ind_avg.department_id
+		, CASE WHEN ind_avg.ind_avg = avg_month.average THEN 'Same'
+			   WHEN ind_avg.ind_avg > avg_month.average THEN 'Higher'
+			   WHEN ind_avg.ind_avg < avg_month.average THEN 'Lower'
+		  END AS comparison
+FROM ind_avg AS ind_avg
+INNER JOIN avg_month as avg_month
+ON ind_avg.pay_date = avg_month.pay_date
+ORDER BY 1 DESC, 2 ASC;
