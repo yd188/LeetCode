@@ -58,10 +58,11 @@ ON a.player_id = b.player_id AND a.event_date-1 = b.first_install
 GROUP BY 1)
 , total_install AS
 (SELECT  d.first_install
-		,COUNT(player_id) AS total
+		,COUNT(c.player_id) AS total
 FROM activity AS c
 INNER JOIN first_install AS d 
-ON c.event_date=first_install.first_install)
+ON c.event_date=d.first_install
+GROUP BY 1)
 SELECT  DISTINCT e.first_install
 		,f.total AS installs
 		,NVL(g.re_counts,0)/f.total::NUMERIC(18,2) AS day1_retention
