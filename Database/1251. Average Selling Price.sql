@@ -10,7 +10,7 @@ Table: Prices
 | price         | int     |
 +---------------+---------+
 (product_id, start_date, end_date) is the primary key for this table.
-Each row of this table indicates the price of the product_id in the period from start_date to end_date.
+Each row of this table indicates the price of the product_id in the period FROM start_date to end_date.
 For each product_id there will be no two overlapping periods. That means there will be no two intersecting periods for the same product_id.
  
 
@@ -20,10 +20,10 @@ Table: UnitsSold
 | Column Name   | Type    |
 +---------------+---------+
 | product_id    | int     |
-| purchase_date | date    |
+| purchASe_date | date    |
 | units         | int     |
 +---------------+---------+
-There is no primary key for this table, it may contain duplicates.
+There is no primary key for this table, it may cONtain duplicates.
 Each row of this table indicates the date, units and product_id of each product sold. 
  
 
@@ -45,7 +45,7 @@ Prices table:
  
 UnitsSold table:
 +------------+---------------+-------+
-| product_id | purchase_date | units |
+| product_id | purchASe_date | units |
 +------------+---------------+-------+
 | 1          | 2019-02-25    | 100   |
 | 1          | 2019-03-01    | 15    |
@@ -64,8 +64,10 @@ Average selling price = Total Price of Product / Number of products sold.
 Average selling price for product 1 = ((100 * 5) + (15 * 20)) / 115 = 6.96
 Average selling price for product 2 = ((200 * 15) + (30 * 30)) / 230 = 16.96
 */
-select p.product_id, sum(p.price*u.units)/sum(u.units)as average_price
-from prices as p
-inner join unitssold as u 
-on p.product_id = u. product_id and u.purchase_date between p.start_date and p.end_date
-order by 1;
+
+SELECT p.product_id
+	,SUM(p.price*u.units)/SUM(u.units) AS average_price
+FROM prices AS p
+INNER JOIN unitssold AS u 
+ON p.product_id = u. product_id AND u.purchASe_date BETWEEN p.start_date AND p.end_date
+ORDER BY 1;
