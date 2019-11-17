@@ -62,7 +62,7 @@ WITH single_ratio AS
 from queries)
 SELECT DISTINCT query_name
 	,SUM(single_ratio)/COUNT(*)::NUMERIC(18,2) AS quality
-	,COUNT(CASE WHEN rating<3 then query END)/COUNT(*)*100::NUMERIC(18,2) AS poor_query_percentage
+	,COUNT(CASE WHEN rating<3 then query_name END)/COUNT(*)::NUMERIC(18,2)*100 AS poor_query_percentage
 FROM single_ratio
 GROUP BY 1
 ORDER BY 1;
