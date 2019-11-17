@@ -58,11 +58,11 @@ Cat queries poor_ query_percentage is (1 / 3) * 100 = 33.33
 
 WITH single_ratio AS
 (SELECT *
-		,rating/position::numeric(18,2) as single_ratio
+	,rating/position::numeric(18,2) as single_ratio
 from queries)
 SELECT DISTINCT query_name
-		,SUM(single_ratio)/COUNT(*)::NUMERIC(18,2) AS quality
-		,COUNT(CASE WHEN rating<3 then query END)/COUNT(*)*100::NUMERIC(18,2) AS poor_query_percentage
+	,SUM(single_ratio)/COUNT(*)::NUMERIC(18,2) AS quality
+	,COUNT(CASE WHEN rating<3 then query END)/COUNT(*)*100::NUMERIC(18,2) AS poor_query_percentage
 FROM single_ratio
 GROUP BY 1
 ORDER BY 1;
