@@ -46,19 +46,19 @@ Player 2 installed the game on 2017-06-25 but didn't log back in on 2017-06-26 s
 
 WITH first_install AS
 (SELECT  player_id
-		,MIN(event_date) AS first_install
+	,MIN(event_date) AS first_install
 FROM activity
 GROUP BY 1)
 , retention_counts AS
 (SELECT  b.first_install
-		,COUNT(a.player_id) AS re_counts
+	,COUNT(a.player_id) AS re_counts
 FROM activity AS a 
 INNER JOIN first_install AS b 
 ON a.player_id = b.player_id AND a.event_date-1 = b.first_install
 GROUP BY 1)
 , total_install AS
 (SELECT  d.first_install
-		,COUNT(c.player_id) AS total
+	,COUNT(c.player_id) AS total
 FROM activity AS c
 INNER JOIN first_install AS d 
 ON c.event_date=d.first_install
