@@ -62,14 +62,54 @@ Result table:
 +----------+---------+----------------+-----------------+-------------------+--------------------+
 */
 
-SELECT  to_char(t.trans_date, 'YYYY-MM') AS month
+--Solution 1:
+WITH approved_count AS
+(SELECT TO_CHAR(trans_date, 'YYYY-MM') AS month
 		,country
-		,COUNT(CASE WHEN state = 'approved' THEN t.id ELSE END) AS approved_count
-		,SUM(CASE WHEN state = 'approved' THEN t.amount ELSE END) AS approved_amount
-		,COUNT(c.trans_id) AS chargeback_count
-		,SUM(CASE WHEN c.trans_id IS NOT NULL THEN t.amount) AS chargeback_amount
-FROM transactions AS t 
-LEFT JOIN chargebacks AS c 
-on t.id = c.trans_id
-GROUP BY 1, 2
-ORDER BY 1, 2;
+		,COUNT(*) AS approved_count
+		,SUM(amount) AS approved_amount
+FROM transactions
+WHERE state = 'approved'
+GROUP BY 1, 2)
+, chargeback_count AS
+(SELECT TO_CHAR(c.trans_date, 'YYYY-MM') AS month
+		,c.country
+		,COUNT(*) AS chargeback_count
+		,SUM(c.amount) AS approved_amount
+FROM transactions AS t
+INNER JOIN chargebacks AS c
+ON t.trans_id = c.trans_id
+GROUP BY 1, 2)
+SELECT   chargeback.month
+		,chargeback.country
+		,approved.approved_count
+		,approved.approved_amount
+		,chargeback.chargeback_count
+		,chargeback.chargeback_amount
+FROM chargeback_count AS chargeback
+JOIN approved_count AS approved
+ON chargeback.month = approved.month AND chargeback.country = approved.month;
+
+--Solution 2:
+SELECT month,
+       country,
+       SUM(IF(type = 'approved', 1, 0)) AS approved_count,
+       SUM(IF(type = 'approved', amount, 0)) AS approved_amount,
+       SUM(IF(type = 'chargeback', 1, 0)) AS chargeback_count,
+       SUM(IF(type = 'chargeback', amount, 0)) AS chargeback_amount
+FROM (
+        (SELECT LEFT(t.trans_date, 7) AS month,
+                t.country,
+                amount,
+                'approved' AS type
+         FROM Transactions AS t
+         WHERE state = 'approved' )
+      UNION ALL
+        (SELECT LEFT(c.trans_date, 7) AS month,
+                t.country,
+                amount,
+                'chargeback' AS type
+         FROM Transactions AS t
+         INNER JOIN Chargebacks AS c ON t.id = c.trans_id)) AS tt
+GROUP BY tt.month,
+         tt.country;
