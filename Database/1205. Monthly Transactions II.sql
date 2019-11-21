@@ -65,30 +65,31 @@ Result table:
 --Solution 1:
 WITH approved_count AS
 (SELECT TO_CHAR(trans_date, 'YYYY-MM') AS month
-		,country
-		,COUNT(*) AS approved_count
-		,SUM(amount) AS approved_amount
+	,country
+	,COUNT(*) AS approved_count
+	,SUM(amount) AS approved_amount
 FROM transactions
 WHERE state = 'approved'
 GROUP BY 1, 2)
 , chargeback_count AS
 (SELECT TO_CHAR(c.trans_date, 'YYYY-MM') AS month
-		,t.country
-		,COUNT(*) AS chargeback_count
-		,SUM(t.amount) AS chargeback_amount
+	,t.country
+	,COUNT(*) AS chargeback_count
+	,SUM(t.amount) AS chargeback_amount
 FROM transactions AS t
 INNER JOIN chargebacks AS c
 ON t.id = c.trans_id
 GROUP BY 1, 2)
 SELECT   chargeback.month
-		,chargeback.country
-		,NVL(approved.approved_count,0) AS approved_count
-		,NVL(approved.approved_amount,0) AS approved_amount
-		,NVL(chargeback.chargeback_count,0) AS chargeback_count
-		,NVL(chargeback.chargeback_amount,0) AS chargeback_amount
+	,chargeback.country
+	,NVL(approved.approved_count,0) AS approved_count
+	,NVL(approved.approved_amount,0) AS approved_amount
+	,NVL(chargeback.chargeback_count,0) AS chargeback_count
+	,NVL(chargeback.chargeback_amount,0) AS chargeback_amount
 FROM chargeback_count AS chargeback
-JOIN approved_count AS approved
-ON chargeback.month = approved.month AND chargeback.country = approved.country;
+LeFT JOIN approved_count AS approved
+ON chargeback.month = approved.month AND chargeback.country = approved.country
+ORDER BY 1, 2, 3, 4;
 
 --Solution 2:
 SELECT month,
