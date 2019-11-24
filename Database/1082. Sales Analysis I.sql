@@ -58,11 +58,11 @@ Result table:
 Both sellers with id 1 and 3 sold products with the most total price of 2800.
 */
 
-select seller_id
-from sales
-group by 1
-having sum(price) = 
-		(select sum(price) 
-		from sales 
-		group by seller_id 
-		order by sum(price) desc limit 1);
+SELECT seller_id
+FROM sales
+GROUP BY 1
+HAVING SUM(price) = 
+		(SELECT SUM(price) 
+		FROM sales 
+		GROUP BY seller_id 
+		ORDER BY sum(price) DESC LIMIT 1);
