@@ -64,8 +64,8 @@ INNER JOIN first_install AS d
 ON c.event_date=d.first_install
 GROUP BY 1)
 SELECT  DISTINCT e.first_install
-		,f.total AS installs
-		,NVL(g.re_counts,0)/f.total::NUMERIC(18,2) AS day1_retention
+	,f.total AS installs
+	,NVL(g.re_counts,0)/f.total::NUMERIC(18,2) AS day1_retention
 FROM first_install AS e
 INNER JOIN total_install AS f 
 ON e.first_install=f.first_install
