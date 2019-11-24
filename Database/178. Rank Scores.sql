@@ -24,6 +24,8 @@ For example, given the above Scores table, your query should generate the follow
 | 3.50  | 4    |
 +-------+------+
 */
-select score, dense_rank()over(order by score desc) as rank
-from score
-order by 2;
+
+SELECT score
+      ,DENSE_RANK() OVER (ORDER BY score DESC) AS rank
+FROM score
+ORDER BY 2;
