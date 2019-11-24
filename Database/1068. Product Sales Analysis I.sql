@@ -55,8 +55,11 @@ Result table:
 | Apple        | 2011  | 9000  |
 +--------------+-------+-------+
 */
-select p.product_name, s.year, s.price
-from sales as s
-inner join product as p
-on s.product_id=p.product_id
-order by s.year;
+
+SELECT p.product_name
+      ,s.year
+      ,s.price
+FROM sales AS s
+INNER join product AS p
+ON s.product_id=p.product_id
+ORDER BY s.year;
