@@ -72,21 +72,28 @@ Result table:
 Solution:
 */
 
-with temp as 
-(select b.group_id, a.first_player as player_id, a.first_score as score
-from matches as a
-inner join players as b 
-on a.first_player=b.player_id
-union
-select d.group_id, c.second_player as player_id, c.second_score as score
-from matches as c
-inner join players as d
-on c.second_player=d.player_id)
-, sumscore as
-(select group_id, player_id, sum(score) as total_score
-from temp
-group by group_id, player_id
-order by player_id asc, total_score desc)
-select distinct group_id, first_value(player_id)over(partition by group_id order by total_score desc, player_id rows between unbounded preceding and unbounded following) as player_id
-from sumscore
-order by 1;
+WITH temp AS 
+(SELECT b.group_id
+       ,a.first_player AS player_id
+       ,a.first_score AS score
+FROM matches AS a
+INNER JOIN players AS b 
+ON a.first_player=b.player_id
+UNION
+SELECT d.group_id
+      ,c.second_player AS player_id
+      ,c.second_score AS score
+FROM matches AS c
+INNER JOIN players AS d
+ON c.second_player=d.player_id)
+, sumscore AS
+(SELECT group_id
+       ,player_id
+       ,SUM(score) AS total_score
+FROM temp
+GROUP BY group_id, player_id
+ORDER BY player_id ASC, total_score DESC)
+SELECT distinct group_id
+       ,FIRST_VALUE(player_id) OVER (PARTITION BY group_id ORDER BY total_score DESC, player_id ASC ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING) AS player_id
+FROM sumscore
+ORDER BY 1;
