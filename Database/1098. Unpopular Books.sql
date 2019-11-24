@@ -71,6 +71,6 @@ LEFT JOIN orders AS b
 ON a.book_id=b.book_id AND DATEDIFF(day, a.available_from , sysdate)>30
 GROUP BY a.name)
 SELECT  book_id
-		,name
+	,name
 FROM total_ordered
 WHERE ordered < 10;
