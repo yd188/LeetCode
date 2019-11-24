@@ -71,7 +71,7 @@ Solution:
 */
 WITH temp AS
 (SELECT a.action_date
- ,COUNT(r.remove_date)/count(a.action)::numeric(18,2) AS ratio
+ ,COUNT(r.remove_date)/count(a.action)::NUMERIC(18,2) AS ratio
 FROM action AS a 
 LEFT JOIN removals AS r
 ON a.post_id = r.post_id
