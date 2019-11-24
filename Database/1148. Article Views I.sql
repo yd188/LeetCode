@@ -39,12 +39,13 @@ Result table:
 | 7    |
 +------+
 */
-
+---Soulution 1:
 SELECT a.author_id AS id
 FROM views AS a
 INNER JOIN views AS b
 ON a.author=b.viewer_id
 
+---Solution 2:
 SELECT DISTINCT author_id AS id
 FROM views
 WHERE author=viewer_id
