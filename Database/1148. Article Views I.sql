@@ -40,11 +40,11 @@ Result table:
 +------+
 */
 
-select a.author_id as id
-from views as a
-inner join views as b
-on a.author=b.viewer_id
+SELECT a.author_id AS id
+FROM views AS a
+INNER JOIN views AS b
+ON a.author=b.viewer_id
 
-select distinct author_id as id
-from views
-where author=viewer_id
+SELECT DISTINCT author_id AS id
+FROM views
+WHERE author=viewer_id
