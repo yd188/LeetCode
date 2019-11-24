@@ -49,12 +49,12 @@ WITH get_date AS
 FROM spendings)
 , get_both AS
 (SELECT  b.spend_date
-		,'both' AS platform
-		,SUM(NVL(a.sum_amount,0)) AS total_amount
-		,COUNT(a.user_id) AS total_users
+	,'both' AS platform
+	,SUM(NVL(a.sum_amount,0)) AS total_amount
+	,COUNT(a.user_id) AS total_users
 FROM(SELECT  spend_date
-			,user_id
-			,SUM(amount) AS sum_amount
+	,user_id
+	,SUM(amount) AS sum_amount
 	FROM spendings
 	GROUP BY 1, 2
 	HAVING COUNT(platform)=2) AS a
@@ -63,12 +63,12 @@ ON a.spend_date = b.spend_date
 GROUP BY 1, 2)
 , get_mobile AS
 (SELECT  d.spend_date
-		,'mobile' AS platform
-		,SUM(NVL(c.sum_amount,0)) AS total_amount
-		,COUNT(c.user_id) AS total_users
+	,'mobile' AS platform
+	,SUM(NVL(c.sum_amount,0)) AS total_amount
+	,COUNT(c.user_id) AS total_users
 FROM(SELECT  spend_date
-			,user_id
-			,SUM(amount) AS sum_amount
+	,user_id
+	,SUM(amount) AS sum_amount
 	FROM spendings
 	WHERE platform = 'mobile'
 	GROUP BY 1, 2
@@ -78,12 +78,12 @@ ON c.spend_date = d.spend_date
 GROUP BY 1, 2)
 , get_desktop AS
 (SELECT  f.spend_date
-		,'mobile' AS platform
-		,SUM(NVL(e.sum_amount,0)) AS total_amount
-		,COUNT(e.user_id) AS total_users
+	,'mobile' AS platform
+	,SUM(NVL(e.sum_amount,0)) AS total_amount
+	,COUNT(e.user_id) AS total_users
 FROM(SELECT  spend_date
-			,user_id
-			,SUM(amount) AS sum_amount
+	,user_id
+	,SUM(amount) AS sum_amount
 	FROM spendings
 	WHERE platform = 'desktop'
 	GROUP BY 1, 2
