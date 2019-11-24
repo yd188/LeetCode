@@ -20,9 +20,10 @@ For example, given the above Logs table, 1 is the only number that appears conse
 | 1               |
 +-----------------+
 */
-select a.num as consecutiveNums
-from logs as a
-inner join log as b
-on a.id=b.id-1 and a.num=b.num
-inner join log as c
-on a.id=c.id-2 and a.num=c.num;
+
+SELECT a.num AS consecutiveNums
+FROM logs AS a
+INNER JOIN log AS b
+ON a.id=b.id-1 AND a.num=b.num
+INNER JOIN log AS c
+ON a.id=c.id-2 AND a.num=c.num;
