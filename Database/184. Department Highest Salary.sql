@@ -33,11 +33,17 @@ Max and Jim both have the highest salary in the IT department and Henry has the 
 
 Solution:
 */
-with temp as
-(select department_id, name, salary, dense_rank()over(partition by department_id order by salary desc) as rnk
-from employee)
-select d.name as department, temp.name as employee, salary
-from temp as temp
-join department as d
-on temp.department_id=d.id
-where temp.rnk=1;
+
+WITH temp AS
+(SELECT department_id
+       ,name
+       ,salary
+       ,DENSE_RANK() OVER (PARTITION BY department_id ORDER BY salary DESC) AS rnk
+FROM employee)
+SELECT d.name AS department
+      ,temp.name AS employee
+      ,salary
+FROM temp AS temp
+JOIN department AS d
+ON temp.department_id=d.id
+WHERE temp.rnk=1;
