@@ -30,10 +30,10 @@ For the sample data above, the output is:
 
 WITH TEMP AS
 (SELECT  a.id
-		,b.id AS id2
-		,c.id AS id3
-		,a.visit_date
-		,a.people
+	,b.id AS id2
+	,c.id AS id3
+	,a.visit_date
+	,a.people
 FROM stadium AS A
 INNER JOIN stadium AS b
 ON a.id = b.id-1 and b.people > 100
@@ -42,9 +42,11 @@ ON a.id = C.id-2 and C.people > 100)
 , get_id AS
 (SELECT id FROM TEMP
 UNION
-SELECT id2 AS id FROM TEMP
+SELECT id2 AS id 
+FROM TEMP
 UNION 
-SELECT id3 AS id FROM TEMP)
+SELECT id3 AS id 
+FROM TEMP)
 SELECT d.* 
 FROM TEMP AS d
 INNER JOIN get_id as e 
