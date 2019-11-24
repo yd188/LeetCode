@@ -90,12 +90,13 @@ The answer for the user with id 4 is no because the brand of their second sold i
 Solution:
 */
 
-with temp as
-(select o.seller_id, row_number() over (partition by o.seller_id order by o.order_date) as ordertime, t.item_brand
-from orders as o
-join items as t 
-on o.item_id = t.item_id)
-select u.uers_id, case when u.favorite_brand=temp.item_brand then 'Yes' else 'No' end as '2nd_item_fav_brand'
-from users as u
-left join temp as temp
-on u.uers_id = temp.seller_id and ordertime=2;
+WITH temp AS
+(SELECT o.seller_id
+       ,ROW_NUMBER() OVER (PARTITION BY o.seller_id ORDER BY o.order_date) AS ordertime, t.item_brAND
+FROM orders AS o
+JOIN items AS t 
+ON o.item_id = t.item_id)
+SELECT u.uers_id, CASE WHEN u.favorite_brand=temp.item_brand THEN 'Yes' else 'No' END AS '2nd_item_fav_brand'
+FROM users AS u
+LEFT JOIN temp AS temp
+ON u.uers_id = temp.seller_id AND ordertime=2;
