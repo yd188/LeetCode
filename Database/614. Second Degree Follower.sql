@@ -44,8 +44,9 @@ order by follower;
 Solution:
 */
 
-select a.follower, count(distinct b.follower) as counts
-from followee as a
-inner join followee as b
-on a.followee=b.follower
+SELECT a.follower
+       ,COUNT(distinct b.follower) AS counts
+FROM followee AS a
+INNER JOIN followee AS b
+ON a.followee=b.follower
 group by 1;
