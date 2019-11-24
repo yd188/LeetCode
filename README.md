@@ -9,6 +9,13 @@
 
 * [Python](https://github.com/ydong188/LeetCode/tree/master/Algorithms)
 
+
+
+|  #  | Title          | Difficulty    | Tag          | Note| 
+|-----|----------------| ------------- |--------------|-----|
+
+
+
 ## Database
 
 
