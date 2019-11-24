@@ -64,14 +64,14 @@ ORDER BY 1;
 
 --Solution 2:
 SELECT product_id
-		,year AS first_year
-		,quantity
-		,price
+	,year AS first_year
+	,quantity
+	,price
 FROM(SELECT product_id
-		,year
-		,quantity
-		,price
-		,DENSE_RANK()OVER(PARTITION BY product_id ORDER BY year ASC) AS RNK
+	,year
+	,quantity
+	,price
+	,DENSE_RANK()OVER(PARTITION BY product_id ORDER BY year ASC) AS RNK
 	FROM sales)
 WHERE rnk = 1
 ORDER BY 1;
