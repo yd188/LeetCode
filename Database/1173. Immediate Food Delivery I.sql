@@ -40,5 +40,5 @@ Result table:
 The orders with delivery id 2 and 3 are immediate while the others are scheduled.
 */
 
-select count(case when order_date = customer_pref_delivery_date then delivery_id)/count(*)::numeric(18,2)*100
-from delivery;
+SELECT COUNT(CASE WHEN order_date = customer_pref_delivery_date THEN delivery_id END)/count(*)::NUMERIC(18,2)*100
+FROM delivery;
