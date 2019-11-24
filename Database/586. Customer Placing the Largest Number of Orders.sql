@@ -44,4 +44,4 @@ FROM (SELECT customer_number
       FROM orders GROUP BY 1))
 SELECT temp.customer_number
 FROM temp
-WHERE rnk=1 ;
+WHERE rnk=1;
