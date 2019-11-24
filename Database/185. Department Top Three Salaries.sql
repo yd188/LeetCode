@@ -43,10 +43,13 @@ In IT department, Max earns the highest salary, both Randy and Joe earn the seco
 Solution:
 */
 
-select final.department, final.employee, final.salary
-from (select d.name as department, e.name as employee, e.salary, row_number() over (partition by e.department order by e.salary) as rownum
-from #employee as e
-inner join #department as d
-on e.departmentid=d.id) as final
-)
-where final.rownum<4;
+SELECT final.department, final.employee, final.salary
+FROM (select d.name AS department
+            ,e.name AS employee
+            ,e.salary
+            ,ROW_NUMBER() over (PARTITION BY e.department ORDER BY e.salary) AS rownum
+      FROM employee AS e
+      INNER JOIN department AS d
+      ON e.departmentid=d.id) AS final
+      )
+WHERE final.rownum<4;
