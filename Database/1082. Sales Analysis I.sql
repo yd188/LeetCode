@@ -65,4 +65,4 @@ HAVING SUM(price) =
 		(SELECT SUM(price) 
 		FROM sales 
 		GROUP BY seller_id 
-		ORDER BY sum(price) DESC LIMIT 1);
+		ORDER BY SUM(price) DESC LIMIT 1);
