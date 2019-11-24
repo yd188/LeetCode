@@ -21,7 +21,8 @@ After running your update statement, the above salary table should have the foll
 | 4  | D    | m   | 500    |
 */
 
+---Solution 1:
 UPDATE salary SET sex = CASE sex WHEN 'm' THEN 'f' ELSE 'm' END;
 
-
-UPDATE salary SETt sex = CASE WHEN sex = 'm' THEN 'f' ELSE 'm' END;
+---Solution 2:
+UPDATE salary SET sex = CASE WHEN sex = 'm' THEN 'f' ELSE 'm' END;
