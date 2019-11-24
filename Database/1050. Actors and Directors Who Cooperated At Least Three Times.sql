@@ -37,7 +37,8 @@ Result table:
 The only pair is (1, 1) where they cooperated exactly 3 times.
 */
 
-select actor_id, director_id
-from actordirector
-group by 1, 2
-having count(*)>2;
+SELECT actor_id
+      ,director_id
+FROM actordirector
+GROUP BY 1, 2
+HAVING COUNT(*)>2;
