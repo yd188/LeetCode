@@ -69,12 +69,13 @@ Note that the output is only one number and that we do not care about the remove
 
 Solution:
 */
-with temp as
-(select a.action_date, count(r.remove_date)/count(a.action)::numeric(18,2) as ratio
-from action as a 
-left join removals as r
-on a.post_id = r.post_id
-where extra ='spam'
-group by 1)
-select avg(ration)*100 as rate
-from temp;
+WITH temp AS
+(SELECT a.action_date
+ ,COUNT(r.remove_date)/count(a.action)::numeric(18,2) AS ratio
+FROM action AS a 
+LEFT JOIN removals AS r
+ON a.post_id = r.post_id
+WHERE extra ='spam'
+GROUP BY 1)
+SELECT AVG(ration)*100 AS rate
+FROM temp;
