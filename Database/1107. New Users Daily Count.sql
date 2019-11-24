@@ -47,6 +47,7 @@ Result table:
 Note that we only care about dates with non zero user count.
 The user with id 5 first logged in on 2019-03-01 so he's not counted on 2019-06-21.
 */
+
 WITH first_login AS
 (SELECT user_id
 	,MIN(activity_date) as first_login
