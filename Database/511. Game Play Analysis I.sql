@@ -39,6 +39,7 @@ Result table:
 +-----------+-------------+
 */
 
-select player_id, min(event_date) as first_login
-from activity
-group by 1;
+SELECT player_id
+       ,MIN(event_date) AS first_login
+FROM activity
+GROUP BY 1;
