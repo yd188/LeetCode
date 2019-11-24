@@ -45,25 +45,28 @@ Note: hash(#) means temporary in Redshift
 Solution:
 */
 
-with total as
-(select t.request_at, count(t.id) as counts
-from #trips as t
-inner join #users as c
-on t.client_id = c.user_id and c.banned != 'Yes'
-inner join #users as d
-on t.client_id = d.user_id and d.banned != 'Yes'
-group by t.request_at)
-, cancelled as 
-(select t2.request_at, count(t2.id) as counts
-from #trips as t2
-inner join #users as c2
-on t2.client_id = c2.user_id and c2.banned != 'Yes'
-inner join #users as d
-on t2.client_id = d2.user_id and d2.banned != 'Yes'
-where t2.status in ('cancelled_by_driver', 'cancelled_by_client')
-group by t2.request_at)
-select total.request_at as day, case when cancelled.counts/total.counts:: numeric(18,2) is null then 0.00 else cancelled.counts/total.counts:: numeric(18,2) end as cancellation_rate
-from total as totoal
-left join cancelled as cancelled
-on total.request_at = cancelled.request_at
-order by day;
+WITH total AS
+(SELECT t.request_at
+        ,COUNT(t.id) AS counts
+FROM trips AS t
+INNER JOIN users AS c
+ON t.client_id = c.user_id AND c.banned != 'Yes'
+INNER JOIN #users AS d
+ON t.client_id = d.user_id AND d.banned != 'Yes'
+GROUP BY t.request_at)
+, cancelled AS 
+(SELECT t2.request_at
+        ,COUNT(t2.id) AS counts
+FROM trips AS t2
+INNER JOIN #users AS c2
+ON t2.client_id = c2.user_id AND c2.banned != 'Yes'
+INNER JOIN #users AS d
+ON t2.client_id = d2.user_id AND d2.banned != 'Yes'
+WHERE t2.status IN ('cancelled_by_driver', 'cancelled_by_client')
+GROUP BY t2.request_at)
+SELECT total.request_at AS day
+      ,CASE WHEN cancelled.counts/total.counts:: NUMERIC(18,2) IS NULL THEN 0.00 ELSE cancelled.counts/total.counts:: NUMERIC(18,2) END AS cancellation_rate
+FROM total AS totoal
+LEFT JOIN cancelled AS cancelled
+ON total.request_at = cancelled.request_at
+ORDER BY day;
