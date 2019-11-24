@@ -55,6 +55,7 @@ Result table:
 +--------------+----------------+
 */
 
-select product_id, sum(quantity) as total_quantity
-from sales 
-group by 1;
+SELECT product_id
+      ,SUM(quantity) AS total_quantity
+FROM sales 
+GROUP BY 1;
