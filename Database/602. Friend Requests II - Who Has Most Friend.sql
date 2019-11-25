@@ -33,7 +33,8 @@ In the real world, multiple people could have the same most number of friends, c
 Solution
 */
 
-SELECT COUNT(DISTINCT id) AS id
+SELECT id
+	,COUNT(id) AS num
 FROM 	(SELECT requester_id AS id
 	,accepter_id AS friend
 	FROM request_accepted
