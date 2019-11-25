@@ -40,7 +40,7 @@ FROM 	(SELECT requester_id AS id
 	FROM request_accepted
 	UNION ALL
 	SELECT accepter_id AS id 
-			,requester_id AS friend
+		,requester_id AS friend
 	FROM request_accepted
 	)
 GROUP BY 1
