@@ -54,6 +54,7 @@
 0185	|	[Department Top Three Salaries](./Database/185.%20Department%20Top%20Three%20Salaries.sql)	|	29.6%	|	Hard	|		|		|||
 0579	|	[Find Cumulative Salary of an Employee](./Database/579.%20Find%20Cumulative%20Salary%20of%20an%20Employee.sql)	|	35.2%	|	Hard	| 🔒 |		|||
 0584	|	[Find Customer Referee](./Database/584.%20Find%20Customer%20Referee.sql)	|	68.9%	|	Easy	| 🔒 |		|||
+0602	|	[Friend Requests II - Who Has Most Friend](./Database/602.%20Friend%20Requests%20II%20-%20Who%20Has%20Most%20Friend.sql)|	47.2%	|	Medium	| 🔒 |		|||
 0511	|	[Game Play Analysis I](./Database/511.%20Game%20Play%20Analysis%20I.sql)	|	76.7%	|	Easy	| 🔒 |		|||
 0550	|	[Game Play Analysis IV](./Database/550.%20Game%20Play%20Analysis%20IV.sql)	|	44.7%	|	Medium	| 🔒 |		|||
 1097	|	[Game Play Analysis V](./Database/1097.%20Game%20Play%20Analysis%20V.sql)	|	51.9%	|	Hard	| 🔒 |		|||
