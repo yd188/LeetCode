@@ -34,7 +34,7 @@ Solution
 */
 
 SELECT id
-	,COUNT(id) AS num
+	,COUNT(*) AS num
 FROM 	(SELECT requester_id AS id
 	,accepter_id AS friend
 	FROM request_accepted
