@@ -35,13 +35,13 @@ Solution
 
 SELECT COUNT(DISTINCT id) AS id
 FROM 	(SELECT requester_id AS id
-		,accepter_id AS friend
-		FROM request_accepted
-		UNION ALL
-		SELECT accepter_id AS id 
-				,requester_id AS friend
-		FROM request_accepted
-		)
+	,accepter_id AS friend
+	FROM request_accepted
+	UNION ALL
+	SELECT accepter_id AS id 
+			,requester_id AS friend
+	FROM request_accepted
+	)
 GROUP BY 1
 ORDER BY 2 DESC
 LIMIT 1;
