@@ -36,7 +36,7 @@ Solution
 SELECT id
 	,COUNT(*) AS num
 FROM 	(SELECT requester_id AS id
-	,accepter_id AS friend
+		,accepter_id AS friend
 	FROM request_accepted
 	UNION ALL
 	SELECT accepter_id AS id 
