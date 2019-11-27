@@ -51,16 +51,16 @@ WITH total AS
 FROM trips AS t
 INNER JOIN users AS c
 ON t.client_id = c.user_id AND c.banned != 'Yes'
-INNER JOIN #users AS d
+INNER JOIN users AS d
 ON t.client_id = d.user_id AND d.banned != 'Yes'
 GROUP BY t.request_at)
 , cancelled AS 
 (SELECT t2.request_at
         ,COUNT(t2.id) AS counts
 FROM trips AS t2
-INNER JOIN #users AS c2
+INNER JOIN users AS c2
 ON t2.client_id = c2.user_id AND c2.banned != 'Yes'
-INNER JOIN #users AS d
+INNER JOIN users AS d
 ON t2.client_id = d2.user_id AND d2.banned != 'Yes'
 WHERE t2.status IN ('cancelled_by_driver', 'cancelled_by_client')
 GROUP BY t2.request_at)
