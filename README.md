@@ -16,19 +16,19 @@
 1134	|	[Armstrong Number](./Algorithms/1134.%20Armstrong%20Number.py)	|	77.7%	|	Easy	| 🔒 |		|||
 1180	|	[Count Substrings with Only One Distinct Letter](./Algorithms/1180.%20Count%20Substrings%20with%20Only%20One%20Distinct%20Letter.py)	|	76.6%	|	Easy	| 🔒 |		|||
 1108	|	[Defanging an IP Address](./Algorithms/1108.%20Defanging%20an%20IP%20Address.py)	|	84.9%	|	Easy	|		|		|||
-0760	|	[Find Anagram Mappings](./Algorithms/0760.%20Find%20Anagram%20Mappings.py)	|	80.0%	|	Easy	| 🔒 |		|||
-0213	|	[House Robber II](./Algorithms/0213.%20House%20Robber%20II.py)	|	35.7%	|	Medium	|		|		|||
+0760	|	[Find Anagram Mappings](./Algorithms/760.%20Find%20Anagram%20Mappings.py)	|	80.0%	|	Easy	| 🔒 |		|||
+0213	|	[House Robber II](./Algorithms/213.%20House%20Robber%20II.py)	|	35.7%	|	Medium	|		|		|||
 1213	|	[Intersection of Three Sorted Arrays](./Algorithms/1213.%20Intersection%20of%20Three%20Sorted%20Arrays.py)	|	77.1%	|	Easy	| 🔒 |		|||
-0771	|	[Jewels and Stones](./Algorithms/0771.%20Jewels%20and%20Stones.py)	|	84.1%	|	Easy	|		|		|||
-0021	|	[Merge Two Sorted Lists](./Algorithms/0021.%20Merge%20Two%20Sorted%20Lists.py)	|	50.0%	|	Easy	|		|		|||
-0665	|	[Non-decreasing Array](./Algorithms/0665.%20Non-decreasing%20Array.py)	|	19.4%	|	Easy	|		|		|||
-0009	|	[Palindrome Number](./Algorithms/0009.%20Palindrome%20Number.py)	|	45.7%	|	Easy	|		|		|||
+0771	|	[Jewels and Stones](./Algorithms/771.%20Jewels%20and%20Stones.py)	|	84.1%	|	Easy	|		|		|||
+0021	|	[Merge Two Sorted Lists](./Algorithms/21.%20Merge%20Two%20Sorted%20Lists.py)	|	50.0%	|	Easy	|		|		|||
+0665	|	[Non-decreasing Array](./Algorithms/665.%20Non-decreasing%20Array.py)	|	19.4%	|	Easy	|		|		|||
+0009	|	[Palindrome Number](./Algorithms/9.%20Palindrome%20Number.py)	|	45.7%	|	Easy	|		|		|||
 1119	|	[Remove Vowels from a String](./Algorithms/1119.%20Remove%20Vowels%20from%20a%20String.py)	|	88.1%	|	Easy	| 🔒 |		|||
-0136	|	[Single Number](./Algorithms/0136.%20Single%20Number.py)	|	62.1%	|	Easy	|		|		|||
+0136	|	[Single Number](./Algorithms/136.%20Single%20Number.py)	|	62.1%	|	Easy	|		|		|||
 1165	|	[Single-Row Keyboard](./Algorithms/1165.%20Single-Row%20Keyboard.py)	|	84.3%	|	Easy	| 🔒 |		|||
 1221	|	[Split a String in Balanced Strings](./Algorithms/1221.%20Split%20a%20String%20in%20Balanced%20Strings.py)	|	78.8%	|	Easy	|		|		|||
-0977	|	[Squares of a Sorted Array](./Algorithms/0977.%20Squares%20of%20a%20Sorted%20Array.py)	|	71.9%	|	Easy	|		|		|||
-0001	|	[Two Sum](./Algorithms/0001.%20Two%20Sum.py)	|	44.8%	|	Easy	|		|		|||
+0977	|	[Squares of a Sorted Array](./Algorithms/977.%20Squares%20of%20a%20Sorted%20Array.py)	|	71.9%	|	Easy	|		|		|||
+0001	|	[Two Sum](./Algorithms/1.%20Two%20Sum.py)	|	44.8%	|	Easy	|		|		|||
 
 
 
