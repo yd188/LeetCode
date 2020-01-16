@@ -15,6 +15,7 @@
 |-----|----------------|----------| ------------- |--------------|-----|
 1134	|	[Armstrong Number](./Algorithms/1134.%20Armstrong%20Number.py)	|	77.7%	|	Easy	| 🔒 |		|||
 1180	|	[Count Substrings with Only One Distinct Letter](./Algorithms/1180.%20Count%20Substrings%20with%20Only%20One%20Distinct%20Letter.py)	|	76.6%	|	Easy	| 🔒 |		|||
+1313	|	[Decompress Run-Length Encoded List](./Algorithms/1313.%20Decompress%20Run-Length%20Encoded%20List.py)	|	85.2%	|	Easy	|		|		|||
 1108	|	[Defanging an IP Address](./Algorithms/1108.%20Defanging%20an%20IP%20Address.py)	|	84.9%	|	Easy	|		|		|||
 0760	|	[Find Anagram Mappings](./Algorithms/760.%20Find%20Anagram%20Mappings.py)	|	80.0%	|	Easy	| 🔒 |		|||
 0213	|	[House Robber II](./Algorithms/213.%20House%20Robber%20II.py)	|	35.7%	|	Medium	|		|		|||
