@@ -18,7 +18,7 @@
 1313	|	[Decompress Run-Length Encoded List](./Algorithms/1313.%20Decompress%20Run-Length%20Encoded%20List.py)	|	85.2%	|	Easy	|		|		|||
 1108	|	[Defanging an IP Address](./Algorithms/1108.%20Defanging%20an%20IP%20Address.py)	|	84.9%	|	Easy	|		|		|||
 0760	|	[Find Anagram Mappings](./Algorithms/760.%20Find%20Anagram%20Mappings.py)	|	80.0%	|	Easy	| 🔒 |		|||
-1295	|	[Find Numbers with Even Number of Digits](./Algorithms/760.%20Find%20Number%20with%20Even%20Number%20of%20Digits.py)	|	84.6%	|	Easy	| 🔒 |		|||
+1295	|	[Find Numbers with Even Number of Digits](./Algorithms/760.%20Find%20Number%20with%20Even%20Number%20of%20Digits.py)	|	84.6%	|	Easy	| 		|		|||
 0213	|	[House Robber II](./Algorithms/213.%20House%20Robber%20II.py)	|	35.7%	|	Medium	|		|		|||
 1213	|	[Intersection of Three Sorted Arrays](./Algorithms/1213.%20Intersection%20of%20Three%20Sorted%20Arrays.py)	|	77.1%	|	Easy	| 🔒 |		|||
 0771	|	[Jewels and Stones](./Algorithms/771.%20Jewels%20and%20Stones.py)	|	84.1%	|	Easy	|		|		|||

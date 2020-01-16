@@ -35,3 +35,6 @@ class Solution:
             if len(str(i))%2==0:
                 results += 1
         return results
+
+    def findNumbers(self, nums: List[int]) -> int:
+    	return sum(len(str(num)) % 2 == 0 for num in nums)
