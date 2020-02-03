@@ -30,7 +30,7 @@
 1165	|	[Single-Row Keyboard](./Algorithms/1165.%20Single-Row%20Keyboard.py)	|	84.3%	|	Easy	| 🔒 |		|||
 1221	|	[Split a String in Balanced Strings](./Algorithms/1221.%20Split%20a%20String%20in%20Balanced%20Strings.py)	|	78.8%	|	Easy	|		|		|||
 0977	|	[Squares of a Sorted Array](./Algorithms/977.%20Squares%20of%20a%20Sorted%20Array.py)	|	71.9%	|	Easy	|		|		|||
-1281	|	[Subtract the Product and Sum of Digits of an Integer](./Algorithms/1281.%20Subtract%20the%20Product%20and%20Su%20of%20Digits%20of%20an%20Integer.py)	|	84.5%	|	Easy	|		|		|||
+1281	|	[Subtract the Product and Sum of Digits of an Integer](./Algorithms/1281.%20Subtract%20the%20Product%20and%20Sum%20of%20Digits%20of%20an%20Integer.py)	|	84.5%	|	Easy	|		|		|||
 0001	|	[Two Sum](./Algorithms/1.%20Two%20Sum.py)	|	44.8%	|	Easy	|		|		|||
 
 
