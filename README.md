@@ -22,6 +22,7 @@
 0213	|	[House Robber II](./Algorithms/213.%20House%20Robber%20II.py)	|	35.7%	|	Medium	|		|		|||
 1213	|	[Intersection of Three Sorted Arrays](./Algorithms/1213.%20Intersection%20of%20Three%20Sorted%20Arrays.py)	|	77.1%	|	Easy	| 🔒 |		|||
 0771	|	[Jewels and Stones](./Algorithms/771.%20Jewels%20and%20Stones.py)	|	84.1%	|	Easy	|		|		|||
+1323	|	[Maximum 69 Number](./Algorithms/1323.%20Maximum%2069%20Number.py)	|	80.0%	|	Easy	|		|		|||
 0021	|	[Merge Two Sorted Lists](./Algorithms/21.%20Merge%20Two%20Sorted%20Lists.py)	|	50.0%	|	Easy	|		|		|||
 0665	|	[Non-decreasing Array](./Algorithms/665.%20Non-decreasing%20Array.py)	|	19.4%	|	Easy	|		|		|||
 0009	|	[Palindrome Number](./Algorithms/9.%20Palindrome%20Number.py)	|	45.7%	|	Easy	|		|		|||
