@@ -26,7 +26,7 @@
 0021	|	[Merge Two Sorted Lists](./Algorithms/21.%20Merge%20Two%20Sorted%20Lists.py)	|	50.0%	|	Easy	|		|		|||
 0665	|	[Non-decreasing Array](./Algorithms/665.%20Non-decreasing%20Array.py)	|	19.4%	|	Easy	|		|		|||
 0009	|	[Palindrome Number](./Algorithms/9.%20Palindrome%20Number.py)	|	45.7%	|	Easy	|		|		|||
-0983	|	[Range Sum of BST](./Algorithms/983.%20Range%20Sum%20of%20BST.py)	|	79.1%	|	Easy	|		|		|||
+0983	|	[Range Sum of BST](./Algorithms/938.%20Range%20Sum%20of%20BST.py)	|	79.1%	|	Easy	|		|		|||
 1119	|	[Remove Vowels from a String](./Algorithms/1119.%20Remove%20Vowels%20from%20a%20String.py)	|	88.1%	|	Easy	| 🔒 |		|||
 0136	|	[Single Number](./Algorithms/136.%20Single%20Number.py)	|	62.1%	|	Easy	|		|		|||
 1165	|	[Single-Row Keyboard](./Algorithms/1165.%20Single-Row%20Keyboard.py)	|	84.3%	|	Easy	| 🔒 |		|||
