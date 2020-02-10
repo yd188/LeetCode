@@ -27,6 +27,7 @@
 0665	|	[Non-decreasing Array](./Algorithms/665.%20Non-decreasing%20Array.py)	|	19.4%	|	Easy	|		|		|||
 0009	|	[Palindrome Number](./Algorithms/9.%20Palindrome%20Number.py)	|	45.7%	|	Easy	|		|		|||
 0983	|	[Range Sum of BST](./Algorithms/938.%20Range%20Sum%20of%20BST.py)	|	79.1%	|	Easy	|		|		|||
+1021	|	[Remove Remove Outermost Parentheses](./Algorithms/1021.%20Remove%20Outermost%20Parentheses.py)	|	76.5%	|	Easy	|		|		|||
 1119	|	[Remove Vowels from a String](./Algorithms/1119.%20Remove%20Vowels%20from%20a%20String.py)	|	88.1%	|	Easy	| 🔒 |		|||
 0136	|	[Single Number](./Algorithms/136.%20Single%20Number.py)	|	62.1%	|	Easy	|		|		|||
 1165	|	[Single-Row Keyboard](./Algorithms/1165.%20Single-Row%20Keyboard.py)	|	84.3%	|	Easy	| 🔒 |		|||
@@ -34,6 +35,7 @@
 0977	|	[Squares of a Sorted Array](./Algorithms/977.%20Squares%20of%20a%20Sorted%20Array.py)	|	71.9%	|	Easy	|		|		|||
 1281	|	[Subtract the Product and Sum of Digits of an Integer](./Algorithms/1281.%20Subtract%20the%20Product%20and%20Sum%20of%20Digits%20of%20an%20Integer.py)	|	84.5%	|	Easy	|		|		|||
 0001	|	[Two Sum](./Algorithms/1.%20Two%20Sum.py)	|	44.8%	|	Easy	|		|		|||
+0020	|	[Valid Parentheses](./Algorithms/20.%20Valid%20Parentheses.py)	|	38.0%	|	Easy	|		|		|||
 
 
 
