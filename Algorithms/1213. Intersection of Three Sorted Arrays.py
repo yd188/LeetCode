@@ -23,3 +23,6 @@ def intersectionofThreeArray(arr1, arr2, arr3):
             if i in arr3:
                 finalList.append(i)
     return finalList
+
+def intersectionofThreeArray(arr1, arr2, arr3):
+    return list(set(arr1)&set(arr2)&set(arr3))
