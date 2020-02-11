@@ -25,6 +25,7 @@
 1323	|	[Maximum 69 Number](./Algorithms/1323.%20Maximum%2069%20Number.py)	|	80.0%	|	Easy	|		|		|||
 0021	|	[Merge Two Sorted Lists](./Algorithms/21.%20Merge%20Two%20Sorted%20Lists.py)	|	50.0%	|	Easy	|		|		|||
 0665	|	[Non-decreasing Array](./Algorithms/665.%20Non-decreasing%20Array.py)	|	19.4%	|	Easy	|		|		|||
+1342	|	[Number of Steps to Reduce a Number to Zero](./Algorithms/1342.%20Number%20of%20Steps%20to%20Reduce%20a%20Number%20to%20Zero.py)	|	89.7%	|	Easy	|		|		|||
 0009	|	[Palindrome Number](./Algorithms/9.%20Palindrome%20Number.py)	|	45.7%	|	Easy	|		|		|||
 0983	|	[Range Sum of BST](./Algorithms/938.%20Range%20Sum%20of%20BST.py)	|	79.1%	|	Easy	|		|		|||
 1021	|	[Remove Remove Outermost Parentheses](./Algorithms/1021.%20Remove%20Outermost%20Parentheses.py)	|	76.5%	|	Easy	|		|		|||
