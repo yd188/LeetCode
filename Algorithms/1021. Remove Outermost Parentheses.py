@@ -54,3 +54,44 @@ def removeOuterParentheses(S):
                 pass
     s[0]=''
     return ''.join(s)
+
+def removeOuterParentheses(S):
+    s = list(S)
+    count = 0
+    for i, string in enumerate(s):
+        count += 1 if string == ')' else -1
+        if count == 0:
+            s[i] = ''
+            try:
+                s[i+1] = ''
+            except:
+                pass
+    s[0] = ''
+    return ''.join(s)
+
+#when count = 0 remove first '(' and last ')'
+def removeOuterParentheses(S):
+    previousi = 0
+    res = ''
+    count = 0
+    for i, s in enumerate(S):
+        count += 1 if s == '(' else -1
+        if count == 0:
+            res += S[previousi+1:i]
+            previousi = i+1
+    return res    
+    
+class Solution:
+    def removeOuterParentheses(S):
+        previ = 0
+        res = ""
+        count = 0
+        for i, s in enumerate(S):
+            if s == '(':
+                count += 1
+            else:
+                count -= 1
+            if count == 0:
+                res += S[previ + 1: i]
+                previ = i + 1
+        return res
