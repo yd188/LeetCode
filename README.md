@@ -31,6 +31,7 @@
 1021	|	[Remove Remove Outermost Parentheses](./Algorithms/1021.%20Remove%20Outermost%20Parentheses.py)	|	76.5%	|	Easy	|		|		|||
 1119	|	[Remove Vowels from a String](./Algorithms/1119.%20Remove%20Vowels%20from%20a%20String.py)	|	88.1%	|	Easy	| 🔒 |		|||
 0007	|	[Reverse Integer](./Algorithms/7.%20Reverse%20Integer.py)	|	25.6%	|	Easy	|		|		|||
+0243	|	[Shortest Word Distance](./Algorithms/243.%20Shortest%20Word%20Distance.py)	|	59.8%	|	Easy	| 🔒 |		|||
 0136	|	[Single Number](./Algorithms/136.%20Single%20Number.py)	|	62.1%	|	Easy	|		|		|||
 1165	|	[Single-Row Keyboard](./Algorithms/1165.%20Single-Row%20Keyboard.py)	|	84.3%	|	Easy	| 🔒 |		|||
 1221	|	[Split a String in Balanced Strings](./Algorithms/1221.%20Split%20a%20String%20in%20Balanced%20Strings.py)	|	78.8%	|	Easy	|		|		|||
