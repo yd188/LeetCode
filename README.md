@@ -24,6 +24,7 @@
 0771	|	[Jewels and Stones](./Algorithms/771.%20Jewels%20and%20Stones.py)	|	84.1%	|	Easy	|		|		|||
 1323	|	[Maximum 69 Number](./Algorithms/1323.%20Maximum%2069%20Number.py)	|	80.0%	|	Easy	|		|		|||
 0021	|	[Merge Two Sorted Lists](./Algorithms/21.%20Merge%20Two%20Sorted%20Lists.py)	|	50.0%	|	Easy	|		|		|||
+0896	|	[Monotonic Array](./Algorithms/896.%20Monotonic%20Array.py)	|	56.8%	|	Easy	|		|		|||
 0665	|	[Non-decreasing Array](./Algorithms/665.%20Non-decreasing%20Array.py)	|	19.4%	|	Easy	|		|		|||
 1342	|	[Number of Steps to Reduce a Number to Zero](./Algorithms/1342.%20Number%20of%20Steps%20to%20Reduce%20a%20Number%20to%20Zero.py)	|	89.7%	|	Easy	|		|		|||
 0009	|	[Palindrome Number](./Algorithms/9.%20Palindrome%20Number.py)	|	45.7%	|	Easy	|		|		|||
@@ -39,6 +40,7 @@
 1281	|	[Subtract the Product and Sum of Digits of an Integer](./Algorithms/1281.%20Subtract%20the%20Product%20and%20Sum%20of%20Digits%20of%20an%20Integer.py)	|	84.5%	|	Easy	|		|		|||
 0001	|	[Two Sum](./Algorithms/1.%20Two%20Sum.py)	|	44.8%	|	Easy	|		|		|||
 0020	|	[Valid Parentheses](./Algorithms/20.%20Valid%20Parentheses.py)	|	38.0%	|	Easy	|		|		|||
+0678	|	[Valid Parenthesis String](./Algorithms/678.%20Valid%20Parenthesis%20String.py)	|	33.8%	|	Medium	|		|		|||
 
 
 
