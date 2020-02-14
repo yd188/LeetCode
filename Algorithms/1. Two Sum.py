@@ -20,3 +20,12 @@ def twosum(nums, target):
         else:
             dic[nums[i]] = i
     return(-1,-1)
+
+def twoSum(nums, target):
+    dic = {value: key for key, value in enumerate(nums)}
+    for i in range(len(nums)):
+        rest = target - nums[i]
+        #if rest in dic:
+        if rest in dic.keys():
+            print(rest)
+            return sorted([dic[rest],i])
