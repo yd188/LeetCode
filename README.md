@@ -40,6 +40,7 @@
 0977	|	[Squares of a Sorted Array](./Algorithms/977.%20Squares%20of%20a%20Sorted%20Array.py)	|	71.9%	|	Easy	|		|		|||
 1281	|	[Subtract the Product and Sum of Digits of an Integer](./Algorithms/1281.%20Subtract%20the%20Product%20and%20Sum%20of%20Digits%20of%20an%20Integer.py)	|	84.5%	|	Easy	|		|		|||
 0001	|	[Two Sum](./Algorithms/1.%20Two%20Sum.py)	|	44.8%	|	Easy	|		|		|||
+0242	|	[Valid Anagram](./Algorithms/242.%20Valid%20Anagram.py)	|	55.0%	|	Easy	|		|		|||
 0020	|	[Valid Parentheses](./Algorithms/20.%20Valid%20Parentheses.py)	|	38.0%	|	Easy	|		|		|||
 0678	|	[Valid Parenthesis String](./Algorithms/678.%20Valid%20Parenthesis%20String.py)	|	33.8%	|	Medium	|		|		|||
 
