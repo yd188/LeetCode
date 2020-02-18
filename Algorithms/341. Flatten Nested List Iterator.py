@@ -33,18 +33,39 @@ Python
 Using a stack of [list, index] pairs.
 '''
 
-class NestedIterator(object):
+# """
+# This is the interface that allows for creating nested lists.
+# You should not implement it, or speculate about its implementation
+# """
+#class NestedInteger:
+#    def isInteger(self) -> bool:
+#        """
+#        @return True if this NestedInteger holds a single integer, rather than a nested list.
+#        """
+#
+#    def getInteger(self) -> int:
+#        """
+#        @return the single integer that this NestedInteger holds, if it holds a single integer
+#        Return None if this NestedInteger holds a nested list
+#        """
+#
+#    def getList(self) -> [NestedInteger]:
+#        """
+#        @return the nested list that this NestedInteger holds, if it holds a nested list
+#        Return None if this NestedInteger holds a single integer
+#        """
 
-    def __init__(self, nestedList):
+class NestedIterator:
+    def __init__(self, nestedList: [NestedInteger]):
         self.stack = [[nestedList, 0]]
-
-    def next(self):
+    
+    def next(self) -> int:
         self.hasNext()
         nestedList, i = self.stack[-1]
         self.stack[-1][1] += 1
         return nestedList[i].getInteger()
-            
-    def hasNext(self):
+    
+    def hasNext(self) -> bool:
         s = self.stack
         while s:
             nestedList, i = s[-1]
@@ -57,3 +78,21 @@ class NestedIterator(object):
                 s[-1][1] += 1
                 s.append([x.getList(), 0])
         return False
+
+# Your NestedIterator object will be instantiated and called as such:
+# i, v = NestedIterator(nestedList), []
+# while i.hasNext(): v.append(i.next())
+
+
+#flattenListOfArray
+def flattenList(nestList):
+    stack = []
+    
+    def makeFlatten(somelist):
+        for item in somelist:
+            if type(item) == list:
+                makeFlatten(item)
+            else:
+                stack.append(item)
+    makeFlatten(nestList)
+    return stack
