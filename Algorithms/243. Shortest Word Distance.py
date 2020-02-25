@@ -29,11 +29,14 @@ S: O(1)
 
 def closest(words, word1, word2):
     idex = [-1, -1]
+    # to give the initial number, 
     ans = len(words)
     for i, j in enumerate(words):
         if j == word1:
             idex[0] = i
-        elif j == word2:
+        if j == word2:
             idex[1] = i
-    if idex[0] != -1 and idex[1] != -1:
-            return min(ans,abs(idex[0]-idex[1]))
+        if idex[0] != -1 and idex[1] != -1:
+            #to reassign the min distance
+            ans =  min(ans,abs(idex[0]-idex[1]))
+    return ans
