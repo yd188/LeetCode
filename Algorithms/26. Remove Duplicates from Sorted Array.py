@@ -35,10 +35,7 @@ int len = removeDuplicates(nums);
 for (int i = 0; i < len; i++) {
     print(nums[i]);
 }
-Accepted
-822,029
-Submissions
-1,895,459
+
 '''
 
 class Solution:

@@ -31,7 +31,8 @@
 1342	|	[Number of Steps to Reduce a Number to Zero](./Algorithms/1342.%20Number%20of%20Steps%20to%20Reduce%20a%20Number%20to%20Zero.py)	|	89.7%	|	Easy	|		|		|||
 0009	|	[Palindrome Number](./Algorithms/9.%20Palindrome%20Number.py)	|	45.7%	|	Easy	|		|		|||
 0983	|	[Range Sum of BST](./Algorithms/938.%20Range%20Sum%20of%20BST.py)	|	79.1%	|	Easy	|		|		|||
-1021	|	[Remove Remove Outermost Parentheses](./Algorithms/1021.%20Remove%20Outermost%20Parentheses.py)	|	76.5%	|	Easy	|		|		|||
+0026	|	[Remove Duplicates from Sorted Array](./Algorithms/26.%20Remove%20Duplicates%20from%20Sorted%20Array.py)	|	43.4%	|	Easy	|		|		|||
+1021	|	[Remove Outermost Parentheses](./Algorithms/1021.%20Remove%20Outermost%20Parentheses.py)	|	76.5%	|	Easy	|		|		|||
 1119	|	[Remove Vowels from a String](./Algorithms/1119.%20Remove%20Vowels%20from%20a%20String.py)	|	88.1%	|	Easy	| 🔒 |		|||
 0007	|	[Reverse Integer](./Algorithms/7.%20Reverse%20Integer.py)	|	25.6%	|	Easy	|		|		|||
 0243	|	[Shortest Word Distance](./Algorithms/243.%20Shortest%20Word%20Distance.py)	|	59.8%	|	Easy	| 🔒 |		|||
