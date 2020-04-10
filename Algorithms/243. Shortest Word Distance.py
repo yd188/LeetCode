@@ -36,7 +36,7 @@ def closest(words, word1, word2):
             idex[0] = i
         if j == word2:
             idex[1] = i
-        if idex[0] != -1 and idex[1] != -1:
+        if idex[0] >=0 and idex[1] >=0:
             #to reassign the min distance
             ans =  min(ans,abs(idex[0]-idex[1]))
     return ans
