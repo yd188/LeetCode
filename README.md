@@ -15,6 +15,7 @@
 |-----|----------------|----------| ------------- |--------------|-----|
 1134	|	[Armstrong Number](./Algorithms/1134.%20Armstrong%20Number.py)	|	77.7%	|	Easy	| 🔒 |		|||
 1290	|	[Convert Binary Number in a Linked List to Integer](./Algorithms/1290.%20Convert%20Binary%20Number%20in%20a%20Linked%20List%20to%20Integer.py)	|	80.2%	|	Easy	|		|		|||
+1351	|	[Count Negative Numbers in a Sorted Matrix](./Algorithms/1351.%20Count%20Negative%20Numbers%20in%20a%20Sorted%20Matrix.py)	|	77.8%	|	Easy	|		|		|||
 0204	|	[Count Primes](./Algorithms/204.%20Count%20Primes.py)	|	30.7%	|	Easy	|		|		|||
 1180	|	[Count Substrings with Only One Distinct Letter](./Algorithms/1180.%20Count%20Substrings%20with%20Only%20One%20Distinct%20Letter.py)	|	76.6%	|	Easy	| 🔒 |		|||
 1313	|	[Decompress Run-Length Encoded List](./Algorithms/1313.%20Decompress%20Run-Length%20Encoded%20List.py)	|	85.2%	|	Easy	|		|		|||
